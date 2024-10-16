@@ -27,6 +27,9 @@ The UKF is used to improve the accuracy of the position estimates by combining t
 - **NEO-6M** (GPS module for latitude and longitude data)
 - **OLED-Display** (OLED Display for displaying results)
 - Breadboard, jumper wires, power supply, etc.
+The following image shows the circuit connections between the ESP32, MPU6050, NEO-6M GPS module, and the OLED display:
+
+![Screenshot 2024-06-18 163332](https://github.com/user-attachments/assets/2c8359f8-cf68-418c-abc5-d7814dd38d11)
 
 ## Software Requirements
 - **Arduino IDE** (for programming ESP32)
@@ -43,6 +46,8 @@ The project is divided into the following key components:
 3. **Prediction Step**: Using IMU data for vehicle motion prediction.
 4. **Update Step**: Correcting the predicted position using GPS data.
 5. **Position Estimation**: Outputting the final estimated position of the vehicle.
+Below is a flowchart that represents the architecture of the system:
+
 
 ## Working Principle
 The IMU (MPU6050) continuously measures acceleration and orientation of the vehicle. The NEO-6M GPS module provides absolute position data (latitude and longitude). 
