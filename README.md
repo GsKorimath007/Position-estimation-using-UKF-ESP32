@@ -14,6 +14,7 @@ This project implements position estimation of an autonomous vehicle using the *
 - [Future Improvements](#future-improvements)
 - [Contributing](#contributing)
 - [License](#license)
+- [Acknowledgements](#acknowledgements)
 
 ## Introduction
 The goal of this project is to estimate the position of an autonomous vehicle using sensor fusion techniques with the Unscented Kalman Filter (UKF). The vehicle's position is tracked using GPS data, while the vehicle's movement is predicted based on IMU sensor data (acceleration and orientation). 
@@ -24,6 +25,7 @@ The UKF is used to improve the accuracy of the position estimates by combining t
 - **ESP32 Dev Module**
 - **MPU6050** (IMU for accelerometer and gyroscope readings)
 - **NEO-6M** (GPS module for latitude and longitude data)
+- **OLED-Display** (OLED Display for displaying results)
 - Breadboard, jumper wires, power supply, etc.
 
 ## Software Requirements
@@ -31,6 +33,7 @@ The UKF is used to improve the accuracy of the position estimates by combining t
 - **ESP32 board libraries** (for Arduino IDE)
 - **MPU6050 library** (for IMU interfacing)
 - **TinyGPS++ library** (for GPS data parsing)
+- **Adafruit-SSD1306** (for OLED Display)
 - **UKF implementation in C++** (custom or open-source library)
 
 ## Architecture
@@ -65,7 +68,8 @@ Key features of the UKF include:
 ### Hardware Setup:
 1. Connect the **NEO-6M** GPS module to the ESP32 using UART (TX, RX).
 2. Connect the **MPU6050** IMU to the ESP32 via I2C (SCL, SDA).
-3. Power both modules using the 3.3V or 5V pins from the ESP32.
+3. Connect the **OLED-Display** IMU to the ESP32 via I2C (SCL, SDA).
+4. Power both modules using the 3.3V or 5V pins from the ESP32.
 
 ### Software Setup:
 1. Install the required libraries in Arduino IDE.
@@ -89,7 +93,11 @@ Key features of the UKF include:
 - Expand to multiple sensor fusion for additional inputs like LIDAR or cameras.
 
 ## Contributing
-Feel free to contribute to this project by submitting issues or pull requests. Ensure to follow the contribution guidelines provided in `CONTRIBUTING.md`.
+Contributions are welcome! Please open an issue or submit a pull request.
 
 ## License
 This project is licensed under the MIT License - see the `LICENSE` file for details.
+
+## Acknowledgements
+Special thanks to [Prof.Rohit Kalyani, Rohit Waddar, Anchal Aravind Patil, Sharath Patil, KLE Technological University] for their support and contributions to this project.
+
